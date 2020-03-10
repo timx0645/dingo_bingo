@@ -34,5 +34,5 @@ export default {
         desktop: `(min-width: ${breakpoint.desktop})`,
         desktopL: `(min-width: ${breakpoint.desktopL})`
     },
-    containerWidth: '1800px'
+    containerWidth: '2000px'
 }

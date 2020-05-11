@@ -1,17 +1,14 @@
-import { useState } from 'react'
 import Wrapper from './style'
-import { Row, Column } from '../../elements'
 import Carousel from 'react-bootstrap/Carousel'
+import ReactPlayer from 'react-player'
 
 const Reklame = () => {
 
     return(
         <Wrapper>
-            <Carousel interval={25000} controls={false}>
+            <Carousel interval={30000} controls={false}>
                 <Carousel.Item>
-                    <video autoPlay loop>
-                        <source src={'../../static/images/vid.mp4'} type="video/mp4" />
-                    </video>
+                    <ReactPlayer autoplay auto playing loop url={'../../static/images/vid.mp4'} width="100%" height="100vh"/> 
                 </Carousel.Item>
                 <Carousel.Item>
                     <img src={'../../static/images/abar-menu-3.jpg'} />

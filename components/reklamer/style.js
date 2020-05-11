@@ -1,10 +1,15 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-    margin: 18px auto 0;
+    margin: 20px auto 0;
     display: flex;
     height: 100%;
-    img, video {
+    img {
+        max-height: 91vh;
+        width: 100%;
+        height: 100vh;
+    }
+    video {
         max-height: 90vh;
         width: 100%;
     }

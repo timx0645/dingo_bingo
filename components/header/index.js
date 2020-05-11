@@ -4,7 +4,7 @@ import Wrapper from './header.style'
 import { defaults } from '../../global'
 import { addBingo, removeBingo, randomBingo } from './functions'
 
-const FrontPageHeader = ({HeadingStyle, Redbox, FlexBox, Orangebox, defaultText, Bingobox, BadBingobox, Bingotal, BadBingotal, ButtonStyle, selectedText}) => {
+const FrontPageHeader = ({HeadingStyle, Redbox, FlexBox, Orangebox, defaultText, Bingobox, BadBingobox, Bingotal, BadBingotal, ButtonStyle, selectedText, nonselected}) => {
 
     const [data, setData ] = useState({ 
             nyeste: 0, 
@@ -55,7 +55,7 @@ const FrontPageHeader = ({HeadingStyle, Redbox, FlexBox, Orangebox, defaultText,
                 <Row {...Orangebox}>
                     <Column.md12 flex>
                         <Text {...defaultText}>Nyeste nummer:</Text>
-                        <Text {...ani? defaultText : selectedText}>{ani? ran : data.nyeste}</Text>
+                        <Text {...ani? nonselected : selectedText}>{ani? ran : data.nyeste}</Text>
                         <Button ButtonText={'Nyt nummer'} onClick={() => returnNumber()} {...ButtonStyle}/>
                     </Column.md12>
                 </Row>
@@ -77,35 +77,42 @@ const FrontPageHeader = ({HeadingStyle, Redbox, FlexBox, Orangebox, defaultText,
 FrontPageHeader.defaultProps = {
     HeadingStyle: {
         AS: 'h1',
-        Size:70,
+        Size:50,
         Weight: 600,
         AlignSelf: 'center',
         ml: 250,
         Color: defaults.font.color.light
     },
     defaultText: {
-        Size: 29,
+        Size: 22,
         Color: defaults.font.color.light,
-        transition: '.4s',
-        pt: 2,
-        pb: 2,
-        pr: 21,
-        pl: 19,
+        transition: '.2s',
         ml: 10,
-        Align: 'center'
+        Align: 'center',
+    },
+    nonselected: {
+        Size: 25,
+        Color: defaults.font.color.light,
+        transition: '.2s',
+        BorderRadius: 200,
+        Background: defaults.colors.third,
+        Height: '45px',
+        Width: '45px',
+        ml: 10,
+        Align: 'center',
+        AlignSelf: 'center'
     },
     selectedText: {
-        Size: 29,
+        Size: 25,
         Color: defaults.font.color.light,
         transition: '.4s',
         BorderRadius: 200,
         Background: defaults.colors.primary,
-        pt: 2,
-        pb: 2,
-        pr: 21,
-        pl: 19,
+        Height: '45px',
+        Width: '45px',
         ml: 10,
-        Align: 'center'
+        Align: 'center',
+        AlignSelf: 'center'
     },
     Redbox: {
         Background: defaults.colors.third,
@@ -141,12 +148,12 @@ FrontPageHeader.defaultProps = {
     },
     Bingotal: {
         AlignSelf: 'center',
-        Size: 28,
+        Size: 22,
         Align: 'center'
     },
     BadBingotal: {
         AlignSelf: 'center',
-        Size: 28,
+        Size: 22,
         Align: 'center',
         Color: defaults.font.color.light
     },

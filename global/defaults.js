@@ -22,7 +22,7 @@ export default {
             dark: '#171718',
             light: '#fff'
         },
-        size: 18
+        size: 15
     },
     breakpoints: {
         mobileS: `(min-width: ${breakpoint.mobileS})`,

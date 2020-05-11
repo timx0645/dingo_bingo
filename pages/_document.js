@@ -20,11 +20,24 @@ export default class MyDocument extends Document {
                 <meta property="og:type" content="website" />
                 <meta name="robots" content="index,nofollow" />    
                 <link rel="icon" type="image/png" href="/static/images/favicon.png" />
+                <link
+                rel="stylesheet"
+                href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+                integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+                crossorigin="anonymous"
+                />
             </Head>
             <body>
             <Main />
             <NextScript />
             </body>
+            <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>
+            <script
+            src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
+            crossorigin></script>
+            <script
+            src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
+            crossorigin></script>
         </html>
         );
     }

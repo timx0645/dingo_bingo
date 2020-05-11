@@ -89,6 +89,7 @@ const ColumnWrapper = styled.div`
     ${p => p.pl? 'padding-left:' + p.pl + 'px;': ''}
     ${p => p.flex? 'display: flex; flex-wrap: wrap;' : ''}
     ${p => p.pointer? 'cursor: pointer;' : ''}
+    ${p => p.Height? 'height: ' + p.Height + ';' : ''}
     @media ${tablet} {
         width: calc(50% - 33px);
     }

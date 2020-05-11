@@ -33,6 +33,9 @@ const TextWrapper = styled.p`
     background-color: ${p => p.Background? p.Background : 'transparent'};
     ${p => p.AlignSelf? 'align-self: ' + p.AlignSelf + ';': ''}
     ${p => p.pointer? 'cursor: pointer;' : ''}
+    ${p => p.Width? 'width: ' + p.Width + ';' : ''}
+    ${p => p.Height? 'height: ' + p.Height + ';' : ''}
+
 `
 
 export { TextWrapper }

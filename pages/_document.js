@@ -18,8 +18,7 @@ export default class MyDocument extends Document {
             <Head>
                 {this.props.styleTags}
                 <meta property="og:type" content="website" />
-                <meta name="robots" content="index,nofollow" />    
-                <link rel="icon" type="image/png" href="/static/images/favicon.png" />
+                <link rel="icon" type="image/png" href="https://hornslethbar.dk/wp-content/uploads/2020/01/hornsleth-favicon-152x152px.png" />
                 <link
                 rel="stylesheet"
                 href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"

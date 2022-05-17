@@ -89,7 +89,7 @@ __webpack_require__.r(__webpack_exports__);
 var HeaderWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "headerstyle__HeaderWrapper",
   componentId: "sc-1uydamr-0"
-})(["display:flex;flex-wrap:wrap;padding:0 50px 50px;div{align-self:center;}img{width:170px;margin:-47px 0 0 0;position:absolute;}"]);
+})(["display:flex;flex-wrap:wrap;padding:0 50px;div{align-self:center;min-height:30px;p.tal{text-align:center;width:100%;min-height:50px;}}img{width:150px;margin:-47px 0 0 0;position:absolute;}"]);
 /* harmony default export */ __webpack_exports__["default"] = (HeaderWrapper);
 
 /***/ }),
@@ -135,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/mnt/c/Users/timsh/CloudStation/Privat/Projekter/dingo_bingo/components/header/index.js",
+var _jsxFileName = "/home/stroustrup/projects/dingo_bingo/components/header/index.js",
     _ButtonStyleRemove,
     _ButtonStyle;
 
@@ -189,7 +189,7 @@ var FrontPageHeader = function FrontPageHeader(_ref) {
     if (!bingotal) {
       var tal = [];
 
-      for (var i = 1; i < 100; i++) {
+      for (var i = 1; i < 91; i++) {
         tal.push(i);
       }
 
@@ -399,22 +399,22 @@ FrontPageHeader.defaultProps = {
     mt: 55
   },
   Bingobox: {
-    pt: 7,
-    pb: 7,
+    flex: true,
     Background: 'rgba(255,255,255,0.8)',
     mt: 13,
     mr: 7.5,
     ml: 7.5,
     Width: 'calc(10% - 15px)',
+    Height: 'calc(((100vh - 300px) / 9) - 13px)',
     BorderRadius: 4,
     pointer: true,
     transition: '.4s'
   },
   BadBingobox: {
-    pt: 7,
-    pb: 7,
+    flex: true,
+    Height: 'calc(((100vh - 300px) / 9) - 13px)',
     Background: 'rgba(0, 150, 129,0.7)',
-    mt: 7,
+    mt: 13,
     mr: 7.5,
     ml: 7.5,
     Width: 'calc(10% - 15px)',
@@ -473,7 +473,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_visibility_sensor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-visibility-sensor */ "./node_modules/react-visibility-sensor/dist/visibility-sensor.js");
 /* harmony import */ var react_visibility_sensor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_visibility_sensor__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style */ "./elements/animations/style.js");
-var _jsxFileName = "/mnt/c/Users/timsh/CloudStation/Privat/Projekter/dingo_bingo/elements/animations/index.js";
+var _jsxFileName = "/home/stroustrup/projects/dingo_bingo/elements/animations/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -675,7 +675,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style */ "./elements/button/style.js");
 
-var _jsxFileName = "/mnt/c/Users/timsh/CloudStation/Privat/Projekter/dingo_bingo/elements/button/index.js";
+var _jsxFileName = "/home/stroustrup/projects/dingo_bingo/elements/button/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -831,7 +831,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style */ "./elements/grid/style.js");
 
-var _jsxFileName = "/mnt/c/Users/timsh/CloudStation/Privat/Projekter/dingo_bingo/elements/grid/index.js";
+var _jsxFileName = "/home/stroustrup/projects/dingo_bingo/elements/grid/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -1230,7 +1230,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "./node_modules/next/dist/next-server/lib/head.js");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/mnt/c/Users/timsh/CloudStation/Privat/Projekter/dingo_bingo/elements/head/index.js";
+var _jsxFileName = "/home/stroustrup/projects/dingo_bingo/elements/head/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1329,7 +1329,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style */ "./elements/heading/style.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 
-var _jsxFileName = "/mnt/c/Users/timsh/CloudStation/Privat/Projekter/dingo_bingo/elements/heading/index.js";
+var _jsxFileName = "/home/stroustrup/projects/dingo_bingo/elements/heading/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -1517,7 +1517,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../index */ "./elements/index.js");
 /* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style */ "./elements/loader/style.js");
 
-var _jsxFileName = "/mnt/c/Users/timsh/CloudStation/Privat/Projekter/dingo_bingo/elements/loader/index.js";
+var _jsxFileName = "/home/stroustrup/projects/dingo_bingo/elements/loader/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -1694,7 +1694,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style */ "./elements/logo/style.js");
 
-var _jsxFileName = "/mnt/c/Users/timsh/CloudStation/Privat/Projekter/dingo_bingo/elements/logo/index.js";
+var _jsxFileName = "/home/stroustrup/projects/dingo_bingo/elements/logo/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -2013,7 +2013,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style */ "./elements/text/style.js");
 
-var _jsxFileName = "/mnt/c/Users/timsh/CloudStation/Privat/Projekter/dingo_bingo/elements/text/index.js";
+var _jsxFileName = "/home/stroustrup/projects/dingo_bingo/elements/text/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -2134,7 +2134,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style */ "./elements/typewritter/style.js");
 
-var _jsxFileName = "/mnt/c/Users/timsh/CloudStation/Privat/Projekter/dingo_bingo/elements/typewritter/index.js";
+var _jsxFileName = "/home/stroustrup/projects/dingo_bingo/elements/typewritter/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -2262,7 +2262,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style */ "./elements/wrapper/style.js");
-var _jsxFileName = "/mnt/c/Users/timsh/CloudStation/Privat/Projekter/dingo_bingo/elements/wrapper/index.js";
+var _jsxFileName = "/home/stroustrup/projects/dingo_bingo/elements/wrapper/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -7040,10 +7040,10 @@ module.exports = hoistNonReactStatics;
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2Fmnt%2Fc%2FUsers%2Ftimsh%2FCloudStation%2FPrivat%2FProjekter%2Fdingo_bingo%2Fpages%2Findex.js!./":
-/*!************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2Fmnt%2Fc%2FUsers%2Ftimsh%2FCloudStation%2FPrivat%2FProjekter%2Fdingo_bingo%2Fpages%2Findex.js ***!
-  \************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2Fhome%2Fstroustrup%2Fprojects%2Fdingo_bingo%2Fpages%2Findex.js!./":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2Fhome%2Fstroustrup%2Fprojects%2Fdingo_bingo%2Fpages%2Findex.js ***!
+  \*****************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11349,7 +11349,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_normalize__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! styled-normalize */ "./node_modules/styled-normalize/dist/index.js");
 /* harmony import */ var styled_normalize__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(styled_normalize__WEBPACK_IMPORTED_MODULE_6__);
 
-var _jsxFileName = "/mnt/c/Users/timsh/CloudStation/Privat/Projekter/dingo_bingo/pages/index.js";
+var _jsxFileName = "/home/stroustrup/projects/dingo_bingo/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -11442,14 +11442,14 @@ module.exports = JSON.parse("{\"Title\":\"Dingo Bingo | Abar Aarhus\",\"Descript
 
 /***/ }),
 
-/***/ 1:
-/*!****************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2Fmnt%2Fc%2FUsers%2Ftimsh%2FCloudStation%2FPrivat%2FProjekter%2Fdingo_bingo%2Fpages%2Findex.js ***!
-  \****************************************************************************************************************************************************************/
+/***/ 2:
+/*!*********************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2Fhome%2Fstroustrup%2Fprojects%2Fdingo_bingo%2Fpages%2Findex.js ***!
+  \*********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2Fmnt%2Fc%2FUsers%2Ftimsh%2FCloudStation%2FPrivat%2FProjekter%2Fdingo_bingo%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2Fmnt%2Fc%2FUsers%2Ftimsh%2FCloudStation%2FPrivat%2FProjekter%2Fdingo_bingo%2Fpages%2Findex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2Fhome%2Fstroustrup%2Fprojects%2Fdingo_bingo%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2Fhome%2Fstroustrup%2Fprojects%2Fdingo_bingo%2Fpages%2Findex.js!./");
 
 
 /***/ }),
@@ -11465,5 +11465,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

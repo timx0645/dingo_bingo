@@ -1,6 +1,6 @@
 import {useEffect, useState } from 'react'
 import { Wrapper, Loader } from '../elements'
-import Bingo from '../components/together'
+import Bingo from '../components/header'
 import Head from '../elements/head'
 import { Globalstyles } from '../global'
 import { Normalize } from 'styled-normalize'

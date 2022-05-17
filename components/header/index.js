@@ -4,7 +4,7 @@ import Wrapper from './header.style'
 import { defaults } from '../../global'
 import { addBingo, removeBingo, randomBingo } from './functions'
 
-const FrontPageHeader = ({HeadingStyle, Redbox, FlexBox, Orangebox, defaultText, Bingobox, BadBingobox, Bingotal, BadBingotal, ButtonStyle, selectedText, nonselected}) => {
+const FrontPageHeader = ({ButtonStyleRemove, HeadingStyle, Redbox, FlexBox, Orangebox, defaultText, Bingobox, BadBingobox, Bingotal, BadBingotal, ButtonStyle, selectedText, nonselected}) => {
 
     const [data, setData ] = useState({ 
             nyeste: 0, 
@@ -17,12 +17,21 @@ const FrontPageHeader = ({HeadingStyle, Redbox, FlexBox, Orangebox, defaultText,
     const [ ran, setRan ] = useState(2)
     
     useEffect(() => {
-        let tal= [];
-        for (let i = 1; i < 91; i++) {
-            tal.push(i)
+        const bingotal = localStorage.getItem('bingotal');
+        if(!bingotal) {
+            let tal= [];
+            for (let i = 1; i < 91; i++) {
+                tal.push(i)
+            }
+            setData({...data, tal});
+        } else {
+            setData({...JSON.parse(bingotal)});
         }
-        setData({...data, tal})
     }, [])
+
+    useEffect(() => {
+        localStorage.setItem('bingotal', JSON.stringify(data));
+    }, [data])
 
     const tomorrow = new Date();
 
@@ -39,8 +48,22 @@ const FrontPageHeader = ({HeadingStyle, Redbox, FlexBox, Orangebox, defaultText,
             setData(randomBingo(data)),
             setAni(false)
             clearInterval(inter)
-        }, 1500)
+        }, 500)
 
+    }
+
+    const removeBingoTal = () => {
+        const bingotal = localStorage.getItem('bingotal');
+        if(bingotal) localStorage.removeItem('bingotal');
+        let tal= [];
+        for (let i = 1; i < 91; i++) {
+            tal.push(i)
+        }
+        setData({
+            nyeste: 0, 
+            tal: [...tal], 
+            bad: []
+        })
     }
 
     return (
@@ -49,14 +72,14 @@ const FrontPageHeader = ({HeadingStyle, Redbox, FlexBox, Orangebox, defaultText,
                 <Row {...Redbox}>
                     <Column.md12 {...FlexBox}>
                         <img src={'../../static/images/favicon.png'} />
-                        <Heading {...HeadingStyle}>Dingo Bingo D. {tomorrow.getDate()} {Months[tomorrow.getMonth()]}.</Heading>
+                        <Heading {...HeadingStyle}>Turbo Bingo D. {tomorrow.getDate()} {Months[tomorrow.getMonth()]}.</Heading>
+                        <Button ButtonText={'Ryd'} onClick={() => removeBingoTal()} {...ButtonStyleRemove}/>
                     </Column.md12>
                 </Row>
                 <Row {...Orangebox}>
                     <Column.md12 flex>
                         <Text {...defaultText}>Nyeste nummer:</Text>
-                        <Text {...ani? nonselected : selectedText}>{ani? ran : data.nyeste}</Text>
-                        <Button ButtonText={'Nyt nummer'} onClick={() => returnNumber()} {...ButtonStyle}/>
+                        <Text onClick={() => returnNumber()} {...ani? nonselected : selectedText}>{ani? ran : data.nyeste}</Text>
                     </Column.md12>
                 </Row>
                 <Row>
@@ -77,42 +100,48 @@ const FrontPageHeader = ({HeadingStyle, Redbox, FlexBox, Orangebox, defaultText,
 FrontPageHeader.defaultProps = {
     HeadingStyle: {
         AS: 'h1',
-        Size:50,
+        Size:35,
         Weight: 600,
         AlignSelf: 'center',
         ml: 250,
         Color: defaults.font.color.light
     },
     defaultText: {
-        Size: 22,
+        Size: 18,
         Color: defaults.font.color.light,
         transition: '.2s',
-        ml: 10,
+        ml: 0,
         Align: 'center',
     },
     nonselected: {
-        Size: 25,
+        Size: 45,
         Color: defaults.font.color.light,
         transition: '.2s',
         BorderRadius: 200,
         Background: defaults.colors.third,
-        Height: '45px',
-        Width: '45px',
-        ml: 10,
+        Height: '70px',
+        Width: '70px',
+        ml: 20,
+        mt: -20,
+        mb: -20,
         Align: 'center',
-        AlignSelf: 'center'
+        AlignSelf: 'center',
+        LineHeight: '70px'
     },
     selectedText: {
-        Size: 25,
+        Size: 45,
         Color: defaults.font.color.light,
         transition: '.4s',
         BorderRadius: 200,
         Background: defaults.colors.primary,
-        Height: '45px',
-        Width: '45px',
-        ml: 10,
+        Height: '70px',
+        Width: '70px',
+        ml: 20,
+        mt: -20,
+        mb: -20,
         Align: 'center',
-        AlignSelf: 'center'
+        AlignSelf: 'center',
+        LineHeight: '70px'
     },
     Redbox: {
         Background: defaults.colors.third,
@@ -129,7 +158,8 @@ FrontPageHeader.defaultProps = {
         pb: 7,
         Background: 'rgba(255,255,255,0.8)',
         mt: 13,
-        mr: 15,
+        mr: 7.5,
+        ml: 7.5,
         Width: 'calc(10% - 15px)',
         BorderRadius: 4,
         pointer: true,
@@ -139,8 +169,9 @@ FrontPageHeader.defaultProps = {
         pt: 7,
         pb: 7,
         Background: 'rgba(0, 150, 129,0.7)',
-        mt: 13,
-        mr: 15,
+        mt: 7,
+        mr: 7.5,
+        ml: 7.5,
         Width: 'calc(10% - 15px)',
         BorderRadius: 4,
         pointer: true,
@@ -159,6 +190,23 @@ FrontPageHeader.defaultProps = {
     },
     FlexBox: {
         flex: true
+    },
+    ButtonStyleRemove: {
+        Background: defaults.colors.third,
+        BorderRadius: 5,
+        Color: defaults.font.color.light,
+        BorderRadius: 5,
+        pr: 10,
+        pl: 10,
+        pt: 5,
+        pb: 5,
+        ml: 'auto',
+        border: 'solid 2px ' + defaults.colors.third,
+        hover: {
+            border: 'solid 2px ' + defaults.colors.third,
+            BorderRadius: 5,
+            Color: defaults.colors.secondary,
+        }
     },
     ButtonStyle: {
         Background: defaults.colors.primary,

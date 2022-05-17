@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { defaults } from '../../global'
 
 const TextWrapper = styled.button`
-    font-family: ${defaults.font.family.button};
+    font-family: cursive;
     font-size: ${p => p.Size? p.Size : defaults.font.size}px;
     color: ${p => p.Color? p.Color : defaults.font.color.dark};
     font-weight: ${p => p.Weight? p.Weight : '400'};

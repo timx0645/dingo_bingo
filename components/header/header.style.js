@@ -3,6 +3,7 @@ import styled from 'styled-components'
 const HeaderWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
+  padding: 0 50px 50px;
   div {
     align-self: center;
   }

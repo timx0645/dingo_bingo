@@ -70,11 +70,13 @@ const FrontPageHeader = ({ButtonStyleRemove, HeadingStyle, Redbox, FlexBox, Oran
         <Animation.slideIn inAni={'left'} outAni={false}>
             <Wrapper>
                 <Row {...Redbox}>
-                    <Column.md12 {...FlexBox}>
-                        <img src={'../../static/images/favicon.png'} />
+                    <Column.md3>
+                        <img src={'../../static/images/logo.svg'} />
+                    </Column.md3>
+                    <Column.md9 {...FlexBox}>
                         <Heading {...HeadingStyle}>Turbo Bingo D. {tomorrow.getDate()} {Months[tomorrow.getMonth()]}.</Heading>
                         <Button ButtonText={'Ryd'} onClick={() => removeBingoTal()} {...ButtonStyleRemove}/>
-                    </Column.md12>
+                    </Column.md9>
                 </Row>
                 <Row {...Orangebox}>
                     <Column.md12 flex>
@@ -82,13 +84,13 @@ const FrontPageHeader = ({ButtonStyleRemove, HeadingStyle, Redbox, FlexBox, Oran
                         <Text onClick={() => returnNumber()} {...ani? nonselected : selectedText}>{ani? ran : data.nyeste}</Text>
                     </Column.md12>
                 </Row>
-                <Row>
+                <Row {...{Height: "calc(100vh - 285px)"}}>
                     {data.tal.map((e,i) => (
                         <Edges 
                             key={`bingo-box-${i}`} 
                             onClick={data.bad.includes(e)? () => setData(removeBingo(data, e)) : () => setData(addBingo(data, e))} 
                             {...data.bad.includes(e)? BadBingobox : Bingobox}>
-                            <Text {...data.bad.includes(e)? BadBingotal : Bingotal}>{e}</Text>
+                            <Text className="tal" {...data.bad.includes(e)? BadBingotal : Bingotal}>{e}</Text>
                         </Edges>
                     ))}
                 </Row>
@@ -103,7 +105,6 @@ FrontPageHeader.defaultProps = {
         Size:35,
         Weight: 600,
         AlignSelf: 'center',
-        ml: 250,
         Color: defaults.font.color.light
     },
     defaultText: {
@@ -144,7 +145,6 @@ FrontPageHeader.defaultProps = {
         LineHeight: '70px'
     },
     Redbox: {
-        Background: defaults.colors.third,
         BorderRadius: 3,
         mt: 30
     },
@@ -154,22 +154,23 @@ FrontPageHeader.defaultProps = {
         mt: 55
     },
     Bingobox: {
-        pt: 7,
-        pb: 7,
-        Background: 'rgba(255,255,255,0.8)',
+        flex: true,
+        Background: 'rgba(255,255,255,0.9)',
         mt: 13,
         mr: 7.5,
         ml: 7.5,
         Width: 'calc(10% - 15px)',
+        Height: 'calc(((100vh - 300px) / 9) - 13px)',
         BorderRadius: 4,
         pointer: true,
         transition: '.4s',
+        MinHeight: 50
     },
     BadBingobox: {
-        pt: 7,
-        pb: 7,
-        Background: 'rgba(0, 150, 129,0.7)',
-        mt: 7,
+        flex: true,
+        Height: 'calc(((100vh - 300px) / 9) - 13px)',
+        Background: 'rgba(0, 150, 129,0.8)',
+        mt: 13,
         mr: 7.5,
         ml: 7.5,
         Width: 'calc(10% - 15px)',
@@ -189,6 +190,7 @@ FrontPageHeader.defaultProps = {
         Color: defaults.font.color.light
     },
     FlexBox: {
+        Background: defaults.colors.third,
         flex: true
     },
     ButtonStyleRemove: {

@@ -2,8 +2,8 @@ import breakpoint from './breakpoints'
 
 export default { 
     colors: {
-        primary: '#009681',
-        secondary: '#f8a22f',
+        primary: '#e62517 ',
+        secondary: '#222',
         third: '#cb3426',
         background: '#171718'
     },
@@ -13,10 +13,10 @@ export default {
     },
     font: {
         family: {
-            button: 'alegreya',
-            text: 'glegoo',
-            heading: 'alegreya',
-            links: 'glegoo'
+            button: 'loslana-niu-pro',
+            text: 'loslana-niu-pro',
+            heading: 'loslana-niu-pro',
+            links: 'loslana-niu-pro'
         },
         color: {
             dark: '#171718',

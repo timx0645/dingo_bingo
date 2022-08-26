@@ -89,7 +89,7 @@ __webpack_require__.r(__webpack_exports__);
 var HeaderWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "headerstyle__HeaderWrapper",
   componentId: "sc-1uydamr-0"
-})(["display:flex;flex-wrap:wrap;padding:0 50px;div{align-self:center;min-height:30px;p.tal{text-align:center;width:100%;min-height:50px;}}img{width:150px;margin:-47px 0 0 0;position:absolute;}"]);
+})(["display:flex;flex-wrap:wrap;padding:0 50px;div{align-self:center;min-height:30px;p.tal{text-align:center;width:100%;min-height:50px;}}img{width:90%;}"]);
 /* harmony default export */ __webpack_exports__["default"] = (HeaderWrapper);
 
 /***/ }),
@@ -253,26 +253,32 @@ var FrontPageHeader = function FrontPageHeader(_ref) {
       lineNumber: 72
     },
     __self: this
-  }), __jsx(_elements__WEBPACK_IMPORTED_MODULE_10__["Column"].md12, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_6__["default"])({}, FlexBox, {
+  }), __jsx(_elements__WEBPACK_IMPORTED_MODULE_10__["Column"].md3, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 73
     },
     __self: this
-  }), __jsx("img", {
-    src: '../../static/images/favicon.png',
+  }, __jsx("img", {
+    src: '../../static/images/logo.svg',
     __source: {
       fileName: _jsxFileName,
       lineNumber: 74
     },
     __self: this
+  })), __jsx(_elements__WEBPACK_IMPORTED_MODULE_10__["Column"].md9, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_6__["default"])({}, FlexBox, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76
+    },
+    __self: this
   }), __jsx(_elements__WEBPACK_IMPORTED_MODULE_10__["Heading"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_6__["default"])({}, HeadingStyle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 77
     },
     __self: this
-  }), "Turbo Bingo D. ", tomorrow.getDate(), " ", Months[tomorrow.getMonth()], "."), __jsx(_elements__WEBPACK_IMPORTED_MODULE_10__["Button"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_6__["default"])({
+  }), "Bingo D. ", tomorrow.getDate(), " ", Months[tomorrow.getMonth()], "."), __jsx(_elements__WEBPACK_IMPORTED_MODULE_10__["Button"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_6__["default"])({
     ButtonText: 'Ryd',
     onClick: function onClick() {
       return removeBingoTal();
@@ -280,26 +286,26 @@ var FrontPageHeader = function FrontPageHeader(_ref) {
   }, ButtonStyleRemove, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 78
     },
     __self: this
   })))), __jsx(_elements__WEBPACK_IMPORTED_MODULE_10__["Row"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_6__["default"])({}, Orangebox, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 81
     },
     __self: this
   }), __jsx(_elements__WEBPACK_IMPORTED_MODULE_10__["Column"].md12, {
     flex: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 82
     },
     __self: this
   }, __jsx(_elements__WEBPACK_IMPORTED_MODULE_10__["Text"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_6__["default"])({}, defaultText, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 83
     },
     __self: this
   }), "Nyeste nummer:"), __jsx(_elements__WEBPACK_IMPORTED_MODULE_10__["Text"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_6__["default"])({
@@ -309,16 +315,18 @@ var FrontPageHeader = function FrontPageHeader(_ref) {
   }, ani ? nonselected : selectedText, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 84
     },
     __self: this
-  }), ani ? ran : data.nyeste))), __jsx(_elements__WEBPACK_IMPORTED_MODULE_10__["Row"], {
+  }), ani ? ran : data.nyeste))), __jsx(_elements__WEBPACK_IMPORTED_MODULE_10__["Row"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_6__["default"])({
+    Height: "calc(100vh - 285px)"
+  }, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 87
     },
     __self: this
-  }, data.tal.map(function (e, i) {
+  }), data.tal.map(function (e, i) {
     return __jsx(_elements__WEBPACK_IMPORTED_MODULE_10__["Edges"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_6__["default"])({
       key: "bingo-box-".concat(i),
       onClick: data.bad.includes(e) ? function () {
@@ -329,13 +337,15 @@ var FrontPageHeader = function FrontPageHeader(_ref) {
     }, data.bad.includes(e) ? BadBingobox : Bingobox, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 87
+        lineNumber: 89
       },
       __self: this
-    }), __jsx(_elements__WEBPACK_IMPORTED_MODULE_10__["Text"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_6__["default"])({}, data.bad.includes(e) ? BadBingotal : Bingotal, {
+    }), __jsx(_elements__WEBPACK_IMPORTED_MODULE_10__["Text"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_6__["default"])({
+      className: "tal"
+    }, data.bad.includes(e) ? BadBingotal : Bingotal, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 91
+        lineNumber: 93
       },
       __self: this
     }), e));
@@ -348,7 +358,6 @@ FrontPageHeader.defaultProps = {
     Size: 35,
     Weight: 600,
     AlignSelf: 'center',
-    ml: 250,
     Color: _global__WEBPACK_IMPORTED_MODULE_12__["defaults"].font.color.light
   },
   defaultText: {
@@ -389,7 +398,6 @@ FrontPageHeader.defaultProps = {
     LineHeight: '70px'
   },
   Redbox: {
-    Background: _global__WEBPACK_IMPORTED_MODULE_12__["defaults"].colors.third,
     BorderRadius: 3,
     mt: 30
   },
@@ -400,7 +408,7 @@ FrontPageHeader.defaultProps = {
   },
   Bingobox: {
     flex: true,
-    Background: 'rgba(255,255,255,0.8)',
+    Background: 'rgba(255,255,255,0.9)',
     mt: 13,
     mr: 7.5,
     ml: 7.5,
@@ -408,12 +416,13 @@ FrontPageHeader.defaultProps = {
     Height: 'calc(((100vh - 300px) / 9) - 13px)',
     BorderRadius: 4,
     pointer: true,
-    transition: '.4s'
+    transition: '.4s',
+    MinHeight: 50
   },
   BadBingobox: {
     flex: true,
     Height: 'calc(((100vh - 300px) / 9) - 13px)',
-    Background: 'rgba(0, 150, 129,0.7)',
+    Background: 'rgba(0, 150, 129,0.8)',
     mt: 13,
     mr: 7.5,
     ml: 7.5,
@@ -434,6 +443,7 @@ FrontPageHeader.defaultProps = {
     Color: _global__WEBPACK_IMPORTED_MODULE_12__["defaults"].font.color.light
   },
   FlexBox: {
+    Background: _global__WEBPACK_IMPORTED_MODULE_12__["defaults"].colors.third,
     flex: true
   },
   ButtonStyleRemove: (_ButtonStyleRemove = {
@@ -2377,8 +2387,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   colors: {
-    primary: '#009681',
-    secondary: '#f8a22f',
+    primary: '#e62517 ',
+    secondary: '#222',
     third: '#cb3426',
     background: '#171718'
   },
@@ -2388,10 +2398,10 @@ __webpack_require__.r(__webpack_exports__);
   },
   font: {
     family: {
-      button: 'alegreya',
-      text: 'glegoo',
-      heading: 'alegreya',
-      links: 'glegoo'
+      button: 'loslana-niu-pro',
+      text: 'loslana-niu-pro',
+      heading: 'loslana-niu-pro',
+      links: 'loslana-niu-pro'
     },
     color: {
       dark: '#171718',
@@ -2428,7 +2438,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    @font-face {\n        font-family: alegreya;\n        font-weight: 400;\n        src: url(\"/static/fonts/Alegreya-Regular.ttf\") format(\"truetype\");\n    }\n    @font-face {\n        font-family: alegreya;\n        font-weight: 500;\n        src: url(\"/static/fonts/Alegreya-Medium.ttf\") format(\"truetype\");\n    }\n    @font-face {\n        font-family: alegreya;\n        font-weight: 600;\n        src: url(\"/static/fonts/Alegreya-Bold.ttf\") format(\"truetype\");\n    }\n    @font-face {\n        font-family: alegreya;\n        font-weight: 700;\n        src: url(\"/static/fonts/Alegreya-ExtraBold.ttf\") format(\"truetype\");\n    }\n    @font-face {\n        font-family: glegoo;\n        font-weight: 400;\n        src: url(\"/static/fonts/Glegoo-Regular.ttf\") format(\"truetype\");\n    }\n\n    * {\n        transiotion: .5s;\n    }\n\n    body {\n        background-image: url(\"/static/images/A-Bar-pattern-background.png\");\n        background-attachment: fixed;\n        background-size: cover;\n        background-repeat: no-repeat;\n        background-position: center; \n    }\n\n    a {\n        text-decoration: none;\n        transition: .5s;\n        & hover {\n            text-decoration: underline;\n        }   \n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    @font-face {\n        font-family: alegreya;\n        font-weight: 400;\n        src: url(\"/static/fonts/Alegreya-Regular.ttf\") format(\"truetype\");\n    }\n    @font-face {\n        font-family: alegreya;\n        font-weight: 500;\n        src: url(\"/static/fonts/Alegreya-Medium.ttf\") format(\"truetype\");\n    }\n    @font-face {\n        font-family: alegreya;\n        font-weight: 600;\n        src: url(\"/static/fonts/Alegreya-Bold.ttf\") format(\"truetype\");\n    }\n    @font-face {\n        font-family: alegreya;\n        font-weight: 700;\n        src: url(\"/static/fonts/Alegreya-ExtraBold.ttf\") format(\"truetype\");\n    }\n    @font-face {\n        font-family: glegoo;\n        font-weight: 400;\n        src: url(\"/static/fonts/Glegoo-Regular.ttf\") format(\"truetype\");\n    }\n\n    @font-face {\n        font-family:\"loslana-niu-pro\";\n        src:url(\"https://use.typekit.net/af/c05561/00000000000000003b9b045f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"woff2\"),url(\"https://use.typekit.net/af/c05561/00000000000000003b9b045f/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"woff\"),url(\"https://use.typekit.net/af/c05561/00000000000000003b9b045f/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3\") format(\"opentype\");\n        font-display:auto;font-style:normal;font-weight:300;font-stretch:normal;\n    }\n\n    @font-face {\n        font-family:\"loslana-niu-pro\";\n        src:url(\"https://use.typekit.net/af/2d8920/00000000000000003b9b0460/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff2\"),url(\"https://use.typekit.net/af/2d8920/00000000000000003b9b0460/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"woff\"),url(\"https://use.typekit.net/af/2d8920/00000000000000003b9b0460/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3\") format(\"opentype\");\n        font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;\n    }\n\n    @font-face {\n        font-family:\"loslana-niu-pro\";\n        src:url(\"https://use.typekit.net/af/8cfaa1/00000000000000003b9b0461/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff2\"),url(\"https://use.typekit.net/af/8cfaa1/00000000000000003b9b0461/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"woff\"),url(\"https://use.typekit.net/af/8cfaa1/00000000000000003b9b0461/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3\") format(\"opentype\");\n        font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;\n    }\n\n    * {\n        transiotion: .5s;\n    }\n\n    body {\n        background-attachment: fixed;\n        background-size: cover;\n        background-repeat: no-repeat;\n        background-position: center; \n        background:\n        linear-gradient(\n          rgba(0, 0, 0, 0.3), \n          rgba(0, 0, 0, 0.3)\n        ),\n        url(\"/static/images/fyal.jpg\");\n    }\n    }\n\n    a {\n        text-decoration: none;\n        transition: .5s;\n        & hover {\n            text-decoration: underline;\n        }   \n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -11438,11 +11448,11 @@ Index.getInitialProps = function _callee() {
 /*! exports provided: Title, Description, og_title, og_description, og_url, og_sitename, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"Title\":\"Dingo Bingo | Abar Aarhus\",\"Description\":\"Dingo Bingo til abar aarhus, lavet af Tim Henriksen\",\"og_title\":\"Dingo Bingo\",\"og_description\":\"Så du sender simpelthen dette link videre igemmen et socialt medie... Modigt. ;)\",\"og_url\":\"dingo.tim-stroustrup.dk\",\"og_sitename\":\"Dingo Bingo | Abar Aarhus\"}");
+module.exports = JSON.parse("{\"Title\":\"Hornsleth Bingo | Hornslethbar Aarhus\",\"Description\":\"Hornsleth Bingo til Hornslethbar, lavet af Tim Henriksen\",\"og_title\":\"Hornsleth Bingo\",\"og_description\":\"Så du sender simpelthen dette link videre igemmen et socialt medie... Modigt. ;)\",\"og_url\":\"horn.tim-stroustrup.dk\",\"og_sitename\":\"Hornsleth Bingo | Hornslethbar Aarhus\"}");
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!*********************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2Fhome%2Fstroustrup%2Fprojects%2Fdingo_bingo%2Fpages%2Findex.js ***!
   \*********************************************************************************************************************************/
@@ -11465,5 +11475,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

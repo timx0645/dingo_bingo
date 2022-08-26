@@ -74,7 +74,7 @@ const FrontPageHeader = ({ButtonStyleRemove, HeadingStyle, Redbox, FlexBox, Oran
                         <img src={'../../static/images/logo.svg'} />
                     </Column.md3>
                     <Column.md9 {...FlexBox}>
-                        <Heading {...HeadingStyle}>Turbo Bingo D. {tomorrow.getDate()} {Months[tomorrow.getMonth()]}.</Heading>
+                        <Heading {...HeadingStyle}>Bingo D. {tomorrow.getDate()} {Months[tomorrow.getMonth()]}.</Heading>
                         <Button ButtonText={'Ryd'} onClick={() => removeBingoTal()} {...ButtonStyleRemove}/>
                     </Column.md9>
                 </Row>
